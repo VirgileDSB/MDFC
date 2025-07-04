@@ -1,0 +1,12 @@
+{
+    "name": "depletion_use_model",
+    "file_path": "./Depletion_exemple/depletion_datas/pos_300000.sph",
+    "results_path": "./Depletion_exemple",
+    "model_path": "./Depletion_exemple/depletion.model",
+    "num_interactions": 2,
+    "num_elements": 1,
+    "default_dtype": "float64",
+    "cutt_off": 2.0,
+    "num_channels": 64,
+    "F_mul": 1000
+}

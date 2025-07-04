@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MDFC"
+version = "0.1.0"
+description = "Molecular Dynamics Forcefild Calculator is a Neural Network to calculate forcefild from a initial molecular configuration"
+readme = "README.md"
+requires-python = "==3.10.*"
+authors = [{ name="Virgile de Saint Blanquat", email="virgile.desaintblanquat@gmail.com" }, { name="Frank Smallenburg", email="frank.smallenburg@cnrs.fr" }]
+dependencies = [
+"torch==2.4.0",
+"e3nn==0.5.1",
+"numpy",
+"opt_einsum",
+"ase",
+"torch-ema",
+"prettytable",
+"matscipy",
+"h5py",
+"dacite",
+"torchmetrics",
+"python-hostlist",
+"configargparse",
+"GitPython",
+"pyYAML",
+"tqdm",
+"lmdb",
+"orjson",
+"typer[all]",
+"matplotlib",
+"pandas",
+"fpsample",
+"schedulefree ",
+"cuequivariance==0.3.0",
+"cuequivariance-torch==0.3.0",
+"cuequivariance-ops-torch-cu12==0.3.0"
+]
+
+[project.scripts]
+MDFC = "MDFC.cli:app"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]  # E: pycodestyle, F: pyflakes, I: isort
+ignore = ["E501"]         # Ignore line too long
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
